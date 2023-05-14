@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Biodata Diri</title>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        background-color: #c0c3ce;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      main {
+        background-color: white;
+        padding: 54px 48px;
+        border-radius: 12px;
+        min-width: 500px;
+      }
+
+      h1 {
+        font-size: 32px;
+        color: rgb(44, 41, 41);
+        text-align: center;
+      }
+
+      label {
+        font-size: smaller;
+        margin-top: 16px;
+        margin-bottom: 6px;
+        color: #e389aa;
+      }
+
+      input {
+        padding: 16px 12px;
+        border-radius: 6px;
+        border: 1px solid silver;
+        font-size: medium;
+        font-family: inherit;
+      }
+
+      .input-group {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .btn-submit {
+        width: 100%;
+        background-color: rgb(91, 91, 242);
+        color: white;
+        margin-top: 16px;
+        cursor: pointer;
+        transition: background-color 0.3s ease-in;
+      }
+
+      .btn-submit:hover {
+        background-color: blue;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>Form Biodata</h1>
+      <form method="POST" action="http://localhost:3000/biodata">
+        <div class="input-group">
+          <label for="nama">Nama:</label>
+          <input type="text" id="nama" name="nama" required />
+        </div>
+
+        <div class="input-group">
+          <label for="tempatLahir">Tempat Lahir:</label>
+          <input type="text" id="tempatLahir" name="tempatLahir" required />
+        </div>
+
+        <div class="input-group">
+          <label for="tanggalLahir">Tanggal Lahir:</label>
+          <input type="date" id="tanggalLahir" name="tanggalLahir" required />
+        </div>
+
+        <div class="input-group">
+          <label for="alamat">Alamat:</label>
+          <input type="text" id="alamat" name="alamat" required />
+        </div>
+
+        <input class="btn-submit" type="submit" value="Submit" />
+      </form>
+    </main>
+  </body>
+</html>
